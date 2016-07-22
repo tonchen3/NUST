@@ -1,97 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.nust.MainActivity"
-    android:background="#adabab">
+    android:background="#adabab"
+    android:orientation="vertical"
+    tools:context="com.example.android.nust.MainActivity">
+
     <TextView
+        android:id="@+id/nust_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_gravity="center_horizontal"
         android:text="Four Seasons of NUST"
-        android:id="@+id/nust_text_view"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#fcfafa" />
+
     <ImageView
+        android:id="@+id/nust"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/nust"
-        android:layout_below="@id/nust_text_view"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/nust" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/spring"
-        android:id="@+id/spring"
-        android:layout_marginEnd="160dp"
-        android:layout_below="@id/nust" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/summer"
-        android:id="@+id/summer"
-        android:layout_below="@id/nust"
-        android:layout_marginStart="180dp"
-        android:layout_alignBaseline="@id/spring" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="spring"
-        android:id="@+id/spring_text_view"
-        android:textColor="#fcfafa"
-        android:layout_below="@+id/spring"
-        android:layout_alignLeft="@id/spring"
-        android:layout_marginLeft="50dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="summer"
-        android:id="@+id/summer_text_view"
-        android:textColor="#fcfbfb"
-        android:layout_below="@+id/summer"
-        android:layout_alignRight="@id/summer"
-        android:layout_marginRight="50dp" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/fall"
-        android:id="@+id/fall"
-        android:layout_below="@id/spring_text_view"
-        android:layout_alignLeft="@id/spring"
-        android:layout_marginEnd="160dp" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/winter"
-        android:layout_alignBaseline="@id/fall"
-        android:layout_below="@id/summer_text_view"
-        android:layout_marginStart="180dp"
-        android:id="@+id/winter" />
-    <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:textAppearance="?android:attr/textAppearanceLarge"
-       android:text="fall"
-       android:id="@+id/fall_text_view"
-        android:textColor="#ffffff"
-        android:layout_below="@id/fall"
-        android:layout_alignLeft="@id/fall"
-        android:layout_marginStart="60dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="winter"
-        android:id="@+id/winter_text_view"
-        android:textColor="#fdfcfc"
-        android:layout_below="@id/winter"
-        android:layout_alignRight="@+id/winter"
-        android:layout_alignBaseline="@id/fall_text_view"
-        android:layout_marginRight="60dp"/>
-</RelativeLayout>
+        android:scaleType="centerCrop"
+        android:src="@drawable/nust" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/spring"
+                android:layout_width="140dp"
+                android:layout_height="93dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/spring" />
+
+            <TextView
+                android:id="@+id/spring_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="spring"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fcfafa" />
+
+            <ImageView
+                android:id="@+id/fall"
+                android:layout_width="141dp"
+                android:layout_height="94dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/fall" />
+
+            <TextView
+                android:id="@+id/fall_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="fall"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/summer"
+                android:layout_width="141dp"
+                android:layout_height="94dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/summer" />
+
+            <TextView
+                android:id="@+id/summer_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="summer"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fcfbfb" />
+
+            <ImageView
+                android:id="@+id/winter"
+                android:layout_width="141dp"
+                android:layout_height="93dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/winter" />
+
+            <TextView
+                android:id="@+id/winter_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="winter"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fdfcfc" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
